@@ -10,6 +10,7 @@
     font-family: Arial, sans-serif;
     color: black;
     line-height: 1.6;
+    background-color: var(--bg-color);
   }
   h1 {
     text-align: center;
@@ -53,8 +54,19 @@
 </style>
 </head>
 <body>
-
 <script>
+  // 获取当前时间
+  var currentHour = new Date().getHours();
+
+  // 根据当前时间设置白天和夜间模式
+  if (currentHour >= 6 && currentHour < 18) {
+    document.documentElement.style.setProperty('--bg-color', 'white');
+    document.documentElement.style.setProperty('--text-color', 'black');
+  } else {
+    document.documentElement.style.setProperty('--bg-color', 'black');
+    document.documentElement.style.setProperty('--text-color', 'white');
+  }
+
   alert("欢迎来到北尘的主页");
 </script>
 
