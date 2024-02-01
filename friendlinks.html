@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <script>
+    // 等待文档加载完成
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取所有友情链接的容器
+        var container = document.getElementById('friend-links');
+        
+        // 获取所有友情链接
+        var links = container.getElementsByClassName('friend-link');
+        
+        // 将NodeList转换为数组
+        var linksArray = Array.from(links);
+        
+        // 使用Fisher-Yates算法打乱数组
+        for (var i = linksArray.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = linksArray[i];
+            linksArray[i] = linksArray[j];
+            linksArray[j] = temp;
+        }
+        
+        // 清空容器
+        container.innerHTML = '';
+        
+        // 将打乱后的友情链接重新添加到容器中
+        linksArray.forEach(function(link) {
+            container.appendChild(link);
+        });
+    });
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>友链🔗</title>
@@ -101,8 +131,9 @@
 <body>
   <div class="container">
     <h1>友情链接❤</h1>
-    
-    <div class="friend-link">
+    <div id="friend-links">
+      <!-- 所有友情链接的代码 -->
+     <div class="friend-link">
       <div class="friend-avatar">
         <img src="https://www.beichen.icu/yeyuanxinzhizhu.jpg" alt="野原新之助的GPT镜像站" width="60" height="60">
       </div>
@@ -111,10 +142,10 @@
         <div class="friend-desc">AI助手，随时随地解答你的问题</div>
         <a class="link-button" href="https://www.bilibili.com/video/BV1va411w7aM/" target="_blank">访问网站</a>
       </div>
-    </div>
+     </div>
 
     
-    <div class="friend-link">
+     <div class="friend-link">
       <div class="friend-avatar">
         <img src="https://avatars.githubusercontent.com/u/90206655" alt="Avatar" width="60" height="60">
       </div>
@@ -123,7 +154,7 @@
         <div class="friend-desc">Follow that star</div>
         <a class="link-button" href="https://www.neokoni.moe" target="_blank">访问网站</a>
       </div>
-    </div>
+     </div>
     
         <div class="friend-link">
           <div class="friend-avatar">
@@ -136,20 +167,19 @@
           </div>
         </div>
 
-    <div class="friend-link">
-  <div class="friend-avatar">
-    <img src="https://bei-chen-leo.github.io/sy.jpeg" alt="岁月的小网站" width="60" height="60">
+      <div class="friend-link">
+        <div class="friend-avatar">
+          <img src="https://bei-chen-leo.github.io/sy.jpeg" alt="岁月的小网站" width="60" height="60">
+       </div>
+        <div class="friend-info">
+        <div class="friend-name">岁月的小网站</div>
+        <div class="friend-desc">回家种地去</div>
+        <a class="link-button" href="https://suiyue.xyz" target="_blank">访问网站</a>
+      </div>
+   </div>
   </div>
-  <div class="friend-info">
-    <div class="friend-name">岁月的小网站</div>
-    <div class="friend-desc">回家种地去</div>
-    <a class="link-button" href="https://suiyue.xyz" target="_blank">访问网站</a>
-  </div>
-</div>
 
         <!-- 更多的友链可以按照上述结构添加 -->
-        
-        </div>
 <div class="center-div">
   <p class="gray"><a href="mailto:bilibili.beichen@gmail.com">联系我添加</a></p>
   <p class="gray">Copyright © 2023 - 2024 北尘， All Rights Reserved</p>
