@@ -5,23 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>打钱💰时间</title>
     <style>
-        /* 设置标题颜色为黑色 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
         h1 {
-            color: black;
+            color: #333;
+            font-size: 2.0em;
         }
         h2 {
-            color: black;
+            color: #666;
+            font-size: 1.5em;
         }
-        /* 设置图片间距和最大宽度 */
-        img {
-            display: inline-block;
+        .payment-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .payment-item {
             margin: 10px;
-            max-width: 100%;
+            transition: transform 0.3s ease;
         }
-        /* 响应式页边距 */
+        .payment-item:hover {
+            transform: scale(1.05);
+        }
+        .payment-item img {
+            width: 150px; /* 设置统一的宽度 */
+            height: auto; /* 保持图片的高宽比 */
+        }
         @media (max-width: 600px) {
-            body {
-                margin: 10px;
+            .payment-item img {
+                width: 100%; /* 在小屏幕上让图片占满整个宽度 */
             }
         }
     </style>
@@ -29,8 +46,13 @@
 <body>
     <h1>打钱💰时间</h1>
     <h2>喜欢的话麻烦打点钱吧，服务器好贵的😖，We can't afford the cost anymore!</h2>
-    <!-- 这里放置图片 -->
-    <img src="https://Bei-Chen-Leo.github.io/QQ.png" alt="QQ 支付二维码">
-    <img src="https://Bei-Chen-Leo.github.io/ZFB.jpg" alt="支付宝支付二维码">
+    <div class="payment-container">
+        <div class="payment-item">
+            <img src="https://Bei-Chen-Leo.github.io/QQ.png" alt="QQ 支付二维码">
+        </div>
+        <div class="payment-item">
+            <img src="https://Bei-Chen-Leo.github.io/ZFB.jpg" alt="支付宝支付二维码">
+        </div>
+    </div>
 </body>
 </html>
