@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<head> 
- <html lang="zh-CN">
-  <script>
-if (location.protocol !== 'https:') {
-  location.replace('https://' + location.hostname + location.pathname + location.search);
-}
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>北尘的主页</title>
-<link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
-<style>
-  body {
+<html lang="zh-CN">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北尘的主页</title>
+  <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
+  <style>
+      body {
     font-family: Arial, sans-serif;
     color: black;
     line-height: 1.6;
@@ -55,7 +51,39 @@ if (location.protocol !== 'https:') {
       margin: 35px;
     }
   }
-</style>
+
+  .button-module {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.button-icon {
+  background-color: transparent; /* transparent background */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 0; /* Remove padding to ensure button size is determined by width and height */
+  border-radius: 8px; /* Increased border-radius for a more rounded square */
+  width: 100px; /* Set a fixed width for the buttons */
+  height: 100px; /* Set a fixed height for the buttons */
+  overflow: hidden; /* Ensures the image is contained within the button */
+}
+.button-icon img {
+  display: block;
+  width: 100%; /* Make the image fill the button width */
+  height: auto; /* Adjust the image height to maintain aspect ratio */
+}
+.button-icon:hover, .button-icon:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+}
+    /* 省略了样式部分，保持原有样式不变 */
+  </style>
 </head>
 <body>
 
@@ -84,12 +112,46 @@ if (location.protocol !== 'https:') {
 <h2 class="subheading">注明⚠️</h2>
 <p>·本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>与北尘（站长本人）编写</p>
 <p>·本页面由<a href="https://pages.github.com/" target="_blank">Github Pages</a>托管</p>
-
-<h2 class="subheading">友链🔗</h2>
-<p> <a href="https://www.beichen.icu/friendlinks" target="_blank">点击即可访问</a></p>
  
 <p class="center gray">Copyright © 2023 - 2024 北尘， All Rights Reserved</p>
 <p class="center gray"><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a>
- 
+
+<div class="button-module">
+  <a href="https://www.douyin.com/user/MS4wLjABAAAAgwbK3SDMw7Tu3mYcf8Pbukct9sE4d_anj6rHmo9cSeWBfdIL0vYypiNofurhM99b" target="_blank">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/抖音.png" alt="抖音" />
+    </button>
+  </a>
+  <a href="https://space.bilibili.com/1299753224" target="_blank">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/b站.png" alt="B站" />
+    </button>
+  </a>
+  <a href="mailto:bilibili.beichen@gmail.com">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/email.png" alt="Email" />
+    </button>
+      <!-- 新增按钮 &4 -->
+  <a href="alist.beichen.icu" target="_blank">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/alist.png" alt="alist" />
+    </button>
+  </a>
+  
+  <!-- 新增按钮 &5 -->
+  <a href="blog.beichen.icu" target="_blank">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/blog.png" alt="blog" />
+    </button>
+  </a>
+  
+  <!-- 新增按钮 &6 -->
+  <a href="https://www.beichen.icu/friendlinks" target="_blank">
+    <button class="button-icon">
+      <img src="https://www.beichen.icu/links.png" alt="links" />
+    </button>
+  </a>
+  </a>
+</div>
 </body>
 </html>
