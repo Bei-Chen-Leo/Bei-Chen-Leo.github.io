@@ -42,14 +42,46 @@
       padding: 0;
     }
     
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
+/* 调整容器样式，使其内容居中 */
+.container {
+  max-width: 960px; /* 保持原有宽度 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 20px; /* 保持原有内边距 */
+  background-color: #fff; /* 保持原有背景色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 保持原有阴影 */
+  border-radius: 8px; /* 保持原有边框圆角 */
+  text-align: center; /* 文本居中 */
+}
+
+/* 调整友情链接容器样式 */
+#friend-links {
+  text-align: center; /* 文本居中 */
+}
+
+/* 调整底部版权信息样式 */
+.center-div {
+  text-align: center; /* 文本居中 */
+  margin: 20px auto; /* 水平居中，并根据需要调整垂直外边距 */
+  width: 100%; /* 宽度设置为100%，以便能够居中 */
+}
+
+/* 调整灰色文字样式 */
+.gray {
+  color: gray; /* 灰色文字 */
+  text-align: center; /* 文本居中 */
+}
+
+/* 调整链接样式，去除下划线并继承父元素颜色 */
+a {
+  text-decoration: none; /* 去除下划线 */
+  color: inherit; /* 继承父元素的文本颜色 */
+}
+
+/* 鼠标悬停时下划线样式 */
+a:hover {
+  text-decoration: underline; /* 鼠标悬停时下划线 */
+}
+
     
     .friend-link {
       display: flex;
@@ -117,23 +149,6 @@
   background-color: #0056b3; /* 保持原有悬停效果 */
 }
 
-  
-  .center-div {
-    text-align: center; /* 文本居中 */
-    margin: 0 auto; /* 水平居中 */
-    width: 100%; /* 可以根据需要调整宽度 */
-  }
-  .gray {
-    color: gray; /* 灰色文字 */
-  }
-  a {
-    text-decoration: none; /* 去除下划线 */
-    color: inherit; /* 继承父元素的文本颜色 */
-  }
-  a:hover {
-    text-decoration: underline; /* 鼠标悬停时下划线 */
-  }
-  </style>
 </head>
 <body>
   <div class="container">
