@@ -47,7 +47,7 @@
     }
     .button-icon {
       background-color: #506adf;
-      border: none;
+      border: 2px solid #fff; /* 更新按钮边框为白色 */
       color: #fff;
       text-align: center;
       text-decoration: none;
@@ -73,6 +73,11 @@
     .gray {
       color: gray;
     }
+    .map-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
   </style>
 </head>
 <body>
@@ -80,6 +85,8 @@
 <header>
   <h1>北尘的主页🏠</h1>
 </header>
+
+<button onclick="redirectToMap()" class="button-icon map-button">Map</button>
 
 <div class="container">
   <section class="about-me">
@@ -138,7 +145,9 @@
 </div>
 
 <script>
-  alert("欢迎来到北尘的主页");
+  function redirectToMap() {
+    window.location.href = "https://map.beichen.icu";
+  }
 </script>
 
 </body>
