@@ -1,170 +1,145 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
- <script>
-    if (location.protocol !== 'https:') {
-        location.replace('https://' + location.hostname + location.pathname + location.search);
-     }
- </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-      body {
-    font-family: Arial, sans-serif;
-    color: black;
-    line-height: 1.6;
-  }
-  h1 {
-    text-align: center;
-  }
-  .subheading {
-    font-size: 1.5em;
-    margin: 20px 0 10px 0;
-    padding-left: 20px;
-  }
-  .center {
-    text-align: center;
-  }
-  .gray {
-    color: gray;
-    font-size: smaller;
-  }
-  a {
-    color: #506adf;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* 响应式页边距 */
-  @media (min-width: 1200px) {
     body {
-      margin: 200px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-  }
-  @media (max-width: 1199px) and (min-width: 768px) {
-    body {
-      margin: 100px;
+    header {
+      background-color: #506adf;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
     }
-  }
-  @media (max-width: 767px) {
-    body {
-      margin: 35px;
+    h1 {
+      margin: 0;
+      font-size: 2em;
     }
-  }
-
-  .button-module {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-.button-icon {
-  background-color: transparent; /* transparent background */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  padding: 0; /* Remove padding to ensure button size is determined by width and height */
-  border-radius: 8px; /* Increased border-radius for a more rounded square */
-  width: 60px; /* Set a fixed width for the buttons */
-  height: 60px; /* Set a fixed height for the buttons */
-  overflow: hidden; /* Ensures the image is contained within the button */
-}
-.button-icon img {
-  display: block;
-  width: 100%; /* Make the image fill the button width */
-  height: auto; /* Adjust the image height to maintain aspect ratio */
-}
-.button-icon:hover, .button-icon:focus {
-  outline: none; /* Remove the focus outline */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
-}
-    /* 省略了样式部分，保持原有样式不变 */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .subheading {
+      font-size: 1.2em;
+      margin-top: 30px;
+      border-bottom: 2px solid #506adf;
+      padding-bottom: 5px;
+    }
+    .about-me, .software, .acknowledgements, .note {
+      margin-top: 20px;
+    }
+    .software p, .acknowledgements p, .note p {
+      margin: 10px 0;
+    }
+    .button-module {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .button-icon {
+      background-color: #506adf;
+      border: none;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button-icon img {
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .button-icon:hover {
+      background-color: #4053a8;
+    }
+    .center {
+      text-align: center;
+    }
+    .gray {
+      color: gray;
+    }
   </style>
 </head>
 <body>
+
+<header>
+  <h1>北尘的主页🏠</h1>
+</header>
+
+<div class="container">
+  <section class="about-me">
+    <h2 class="subheading">关于我🤔</h2>
+    <p>一名14岁的初生，正在努力考高中...</p>
+    <p>性别男，中国人，男女混血(bushi)</p>
+    <p>爱好：玩MC，搞电脑美化仿mac，个人觉得苹果比较美观而已...</p>
+  </section>
+
+  <section class="software">
+    <h2 class="subheading">关于我使用的一些软件🧑‍💻</h2>
+    <p><a href="https://www.openfrp.net/" target="_blank">OPENFRP 开放映射</a>（这是一款免费、高效、便捷的端口映射软件，我的alist站点就是由它映射的）</p>
+    <p><a href="https://afdian.net/p/0164034c016c11ebafcb52540025c377" target="_blank">PCL2启动器</a>（我的世界启动器，简约，高效，舒服，有点小钱的可以<a href="https://afdian.net/a/LTCat" target="_blank">赞助</a>龙腾猫跃大大哦）</p>
+  </section>
+
+  <section class="acknowledgements">
+    <h2 class="subheading">鸣谢🙇</h2>
+    <p>Github</p>
+    <p>ecraft(感谢你为我提供服务器，能与我探索网络世界）</p>
+    <p>Crush（感谢你借我正版账号，注：这不是我的crush，“Crush”只是网名而已）</p>
+    <p>Microsoft™</p>
+    <p>ChatGLM</p>
+  </section>
+
+  <section class="note">
+    <h2 class="subheading">注明⚠️</h2>
+    <p>本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>、<a href="https://chat.openai.com/" target="_blank">ChatGPT3.5</a>与北尘（站长本人）编写</p>
+    <p>本页面由<a href="https://pages.github.com/" target="_blank">Github Pages</a>托管</p>
+  </section>
+</div>
+
+<footer class="center gray">
+  <p>Copyright © 2023 - 2024 北尘， All Rights Reserved</p>
+  <p><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a></p>
+</footer>
+
+<div class="button-module">
+  <a href="https://www.douyin.com/user/MS4wLjABAAAAgwbK3SDMw7Tu3mYcf8Pbukct9sE4d_anj6rHmo9cSeWBfdIL0vYypiNofurhM99b" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/抖音.png" alt="抖音">抖音
+  </a>
+  <a href="https://space.bilibili.com/1299753224" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/b站.png" alt="B站">B站
+  </a>
+  <a href="mailto:bilibili.beichen@gmail.com" class="button-icon">
+    <img src="https://www.beichen.icu/email.png" alt="Email">Email
+  </a>
+  <a href="https://alist.beichen.icu" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/alist.png" alt="alist">Alist
+  </a>
+  <a href="https://blog.beichen.icu" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/blog.png" alt="blog">Blog
+  </a>
+  <a href="https://www.beichen.icu/friendlinks" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/links.png" alt="links">Friend Links
+  </a>
+</div>
 
 <script>
   alert("欢迎来到北尘的主页");
 </script>
 
-<h1>北尘的主页🏠</h1>
-
-<h2 class="subheading">关于我🤔</h2>
-<p>·一名15岁的初中生，正在努力考高中。。。</p>
-<p>·性别男，中国人，男女混血(bushi </p>
-<p>·爱好：玩MC，搞电脑美化仿mac，个人觉得苹果比较美观而已。。。</p>
-
-<h2 class="subheading">关于我使用的一些软件🧑‍💻</h2>
-<p>·<a href="https://www.openfrp.net/" target="_blank">OPENFRP 开放映射</a>（这是一款免费、高效、便捷的端口映射软件，我的alist站点就是由它映射的）</p>
-<p>·<a href="https://afdian.net/p/0164034c016c11ebafcb52540025c377" target="_blank">PCL2启动器</a>（我的世界启动器，简约，高效，舒服，有点小钱的可以<a href="https://afdian.net/a/LTCat" target="_blank">赞助</a>龙腾猫跃大大哦）</p>
-
-<h2 class="subheading">鸣谢🙇</h2>
- <p>·Github</p>
-<p>·ecraft(感谢你为我提供服务器，能与我探索网络世界）</p>
-<p>·Crush（感谢你借我正版账号，注：这不是我的crush，“Crush”只是网名而已。。）</p>
-<p>·Microsoft™</p>
-<p>·ChatGLM</p>
-
-<h2 class="subheading">注明⚠️</h2>
-<p>·本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>与北尘（站长本人）编写</p>
-<p>·本页面由<a href="https://pages.github.com/" target="_blank">Github Pages</a>托管</p>
- 
-<div class="button-module">
-  <a href="https://www.douyin.com/user/MS4wLjABAAAAgwbK3SDMw7Tu3mYcf8Pbukct9sE4d_anj6rHmo9cSeWBfdIL0vYypiNofurhM99b" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/抖音.png" alt="抖音" />
-    </button>
-  </a>
-  <a href="https://space.bilibili.com/1299753224" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/b站.png" alt="B站" />
-    </button>
-  </a>
-  <a href="mailto:bilibili.beichen@gmail.com">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/email.png" alt="Email" />
-    </button>
-      <!-- 新增按钮 &4 -->
-  <a href="https://alist.beichen.icu" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/alist.png" alt="alist" />
-    </button>
-  </a>
-  
-  <!-- 新增按钮 &5 -->
-  <a href="https://blog.beichen.icu" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/blog.png" alt="blog" />
-    </button>
-  </a>
-  
-  <!-- 新增按钮 &6 -->
-  <a href="https://www.beichen.icu/friendlinks" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/links.png" alt="links" />
-    </button>
-  </a>
-
-     <!-- 新增按钮 &7 -->
-  <a href="https://www.beichen.icu/dq" target="_blank">
-    <button class="button-icon">
-      <img src="https://www.beichen.icu/捐赠.png" alt="links" />
-    </button>
-  </a>
-   
-  </a>
-</div>
-
- <p class="center gray">Copyleft © 2023 - 2024 北尘， All Lefts Reserved</p>
-<p class="center gray"><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a>
- 
 </body>
 </html>
