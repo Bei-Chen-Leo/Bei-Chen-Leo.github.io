@@ -73,7 +73,7 @@
     .gray {
       color: gray;
     }
-    .map-button {
+    .menu-button { /* 修改按钮类名为menu-button */
       position: absolute;
       top: 20px;
       left: 20px;
@@ -86,7 +86,7 @@
   <h1>北尘的主页🏠</h1>
 </header>
 
-<button onclick="redirectToMap()" class="button-icon map-button">目录</button>
+<button onclick="redirectToMenu()" class="button-icon menu-button">目录</button>
 
 <div class="container">
   <section class="about-me">
@@ -145,8 +145,8 @@
 </div>
 
 <script>
-  function redirectToMap() {
-    window.location.href = "https://map.beichen.icu";
+  function redirectToMenu() {
+    window.location.href = "https://menu.beichen.icu"; /* 修改跳转链接为menu */
   }
 </script>
 
