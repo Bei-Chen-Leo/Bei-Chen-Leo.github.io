@@ -12,9 +12,15 @@
 }
 
 a {
-    color: rgba(214,234,255,1.00);
+    color: rgba(214,234,255,1.00); /* Original color */
     text-decoration: none;
     text-underline-offset: 3px;
+}
+
+@media (prefers-color-scheme: light) {
+    a {
+        color: #0000FF; /* Deep blue color for light mode */
+    }
 }
 
 a:hover {
