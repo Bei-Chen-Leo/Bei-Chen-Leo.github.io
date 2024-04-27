@@ -224,10 +224,17 @@
     document.body.classList.toggle("dark-mode"); // Toggle dark mode class on body
   }
 
+  // Function to detect if the browser prefers dark mode
+  function isDarkModePreferred() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
   // Event listener for clicking the page background to toggle dark mode
   document.body.addEventListener("click", function(event) {
     if (event.target === document.body) { // Check if the click target is the body
-      toggleDarkMode(); // Toggle dark mode
+      if (isDarkModePreferred()) { // Check if dark mode is preferred by the browser
+        toggleDarkMode(); // Toggle dark mode
+      }
     }
   });
 </script>
