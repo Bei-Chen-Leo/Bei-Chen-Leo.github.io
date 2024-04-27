@@ -6,27 +6,27 @@
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-    :root {
-        --bg-color-light: #EDF0F4;
-        --bg-color-dark: #474C53;
-    }
+:root {
+    --bg-color-light: #EDF0F4;
+    --bg-color-dark: #474C53;
+}
 
+a {
+    color: rgba(214,234,255,1.00); /* Original color */
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+
+@media (prefers-color-scheme: light) {
     a {
-        color: rgba(214,234,255,1.00); /* Original color */
-        text-decoration: none;
-        text-underline-offset: 3px;
+        color: #0000FF; /* Deep blue color for light mode */
     }
+}
 
-    @media (prefers-color-scheme: light) {
-        a {
-            color: #0000FF; /* Deep blue color for light mode */
-        }
-    }
-
-    a:hover {
-        color: white;
-        text-decoration: underline;
-    }
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
     body {
       font-family: Arial, sans-serif;
@@ -34,92 +34,73 @@
       margin: 0;
       padding: 0;
     }
-
     header {
       background-color: #506adf;
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
-
     h1 {
       margin: 0;
       font-size: 2em;
     }
-
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
     }
-
     .subheading {
       font-size: 1.2em;
       margin-top: 30px;
       border-bottom: 2px solid #506adf;
       padding-bottom: 5px;
     }
-
     .about-me, .software, .acknowledgements, .note {
       margin-top: 20px;
     }
-
     .software p, .acknowledgements p, .note p {
       margin: 10px 0;
     }
-
     .button-module {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 30px;
     }
-
     .button-icon {
       background-color: #506adf;
-      border: 2px solid #fff;
+      border: 2px solid #fff; /* 更新按钮边框为白色 */
       color: #fff;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 12px; /* Adjust font size */
-      margin: 5px; /* Adjust margin */
+      font-size: 16px;
+      margin: 10px;
       cursor: pointer;
-      padding: 8px 12px; /* Adjust padding */
+      padding: 15px 20px;
       border-radius: 5px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
-      animation: flowing 2s infinite alternate; /* Add animation for flowing effect */
+      transition: background-color 0.3s ease;
     }
-
-    @keyframes flowing {
-      0% {
-        box-shadow: 0 0 10px #506adf; /* Initial box shadow */
-      }
-      100% {
-        box-shadow: 0 0 20px #4053a8; /* Final box shadow */
-      }
+    .button-icon img {
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
     }
-
     .button-icon:hover {
       background-color: #4053a8;
-      box-shadow: 0 0 20px #4053a8; /* Add box shadow on hover */
     }
-
     .center {
       text-align: center;
     }
-
     .gray {
       color: gray;
     }
-
-    .menu-button {
+    .menu-button { /* 修改按钮类名为menu-button */
       position: absolute;
       top: 20px;
       left: 20px;
     }
-
-    .footer-button {
+    .footer-button { /* 添加底部按钮样式 */
       background-color: #506adf;
       border: 2px solid #fff;
       color: #fff;
@@ -133,13 +114,11 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-
     .footer-button img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
-
     .footer-button:hover {
       background-color: #4053a8;
     }
