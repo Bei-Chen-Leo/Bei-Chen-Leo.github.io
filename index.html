@@ -1,154 +1,126 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-    /* Light Mode Styles */
-    [data-theme='light'] {
-        --bg-color-light: #EDF0F4;
-        --bg-color-dark: #474C53;
-        color: #333;
-        background-color: #fff;
-    }
+:root {
+    --bg-color-light: #EDF0F4;
+    --bg-color-dark: #474C53;
+}
 
-    /* Dark Mode Styles */
-    [data-theme='dark'] {
-        --bg-color-light: #EDF0F4;
-        --bg-color-dark: #474C53;
-        color: #fff;
-        background-color: #333;
-    }
+a {
+    color: rgba(214,234,255,1.00); /* Original color */
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
 
+@media (prefers-color-scheme: light) {
     a {
-        color: rgba(214,234,255,1.00);
-        text-decoration: none;
-        text-underline-offset: 3px;
+        color: #0000FF; /* Deep blue color for light mode */
     }
+}
 
-    @media (prefers-color-scheme: light) {
-        a {
-            color: #0000FF;
-        }
-    }
-
-    a:hover {
-        color: white;
-        text-decoration: underline;
-    }
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-
     header {
-        background-color: #506adf;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
+      background-color: #506adf;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
     }
-
-    header img {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-
     h1 {
-        margin: 0;
-        font-size: 2em;
+      margin: 0;
+      font-size: 2em;
     }
-
     .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 0 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
     }
-
     .subheading {
-        font-size: 1.2em;
-        margin-top: 30px;
-        border-bottom: 2px solid #506adf;
-        padding-bottom: 5px;
+      font-size: 1.2em;
+      margin-top: 30px;
+      border-bottom: 2px solid #506adf;
+      padding-bottom: 5px;
     }
-
     .about-me, .software, .acknowledgements, .note {
-        margin-top: 20px;
+      margin-top: 20px;
     }
-
     .software p, .acknowledgements p, .note p {
-        margin: 10px 0;
+      margin: 10px 0;
     }
-
     .button-module {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
-
     .button-icon {
-        background-color: #506adf;
-        border: 2px solid #fff;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        padding: 15px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+      background-color: #506adf;
+      border: 2px solid #fff; /* 更新按钮边框为白色 */
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
-
     .button-icon img {
-        width: 30px;
-        margin-right: 10px;
-        vertical-align: middle;
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
     }
-
     .button-icon:hover {
-        background-color: #4053a8;
+      background-color: #4053a8;
     }
-
     .center {
-        text-align: center;
+      text-align: center;
     }
-
     .gray {
-        color: gray;
+      color: gray;
     }
-
-    .footer-button {
-        background-color: #506adf;
-        border: 2px solid #fff;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        padding: 15px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+    .menu-button { /* 修改按钮类名为menu-button */
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
-
+    .footer-button { /* 添加底部按钮样式 */
+      background-color: #506adf;
+      border: 2px solid #fff;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
     .footer-button img {
-        width: 30px;
-        margin-right: 10px;
-        vertical-align: middle;
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
     }
-
     .footer-button:hover {
-        background-color: #4053a8;
+      background-color: #4053a8;
     }
   </style>
 </head>
@@ -156,8 +128,9 @@
 
 <header>
   <h1>北尘的主页🏠</h1>
-  <img id="modeToggle" src="https://www.beichen.icu/sun.png" alt="Mode Toggle" onclick="toggleMode()">
 </header>
+
+<button onclick="redirectToMenu()" class="button-icon menu-button">目录</button>
 
 <div class="container">
   <section class="about-me">
@@ -184,7 +157,7 @@
 
   <section class="note">
     <h2 class="subheading">注明⚠️</h2>
-    <p> 本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>与北尘（站长本人）编写</p>
+    <p>本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>与北尘（站长本人）编写</p>
     <p>本页面由<a href="https://pages.github.com/" target="_blank">Github Pages</a>托管</p>
   </section>
 </div>
@@ -213,23 +186,15 @@
   <a href="https://www.beichen.icu/friendlinks" target="_blank" class="button-icon">
     <img src="https://www.beichen.icu/links.png" alt="links">友链
   </a>
+</div>
   <a href="https://www.beichen.icu/dq" target="_blank" class="button-icon">
     <img src="https://www.beichen.icu/捐赠.png" alt="Donate">打钱
   </a>
 </div>
 
 <script>
-  function toggleMode() {
-    var img = document.getElementById('modeToggle');
-    var currentSrc = img.src;
-    
-    if (currentSrc.includes('sun')) {
-      img.src = "https://www.beichen.icu/moon.png";
-      document.documentElement.setAttribute('data-theme', 'dark'); // Set dark mode
-    } else {
-      img.src = "https://www.beichen.icu/sun.png";
-      document.documentElement.setAttribute('data-theme', 'light'); // Set light mode
-    }
+  function redirectToMenu() {
+    window.location.href = "https://www.beichen.icu/menu"; /* 修改跳转链接为menu */
   }
 </script>
 
