@@ -6,81 +6,67 @@
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-    :root {
-      --bg-color-light: #EDF0F4;
-      --bg-color-dark: #474C53;
-    }
-    
+:root {
+    --bg-color-light: #EDF0F4;
+    --bg-color-dark: #474C53;
+}
+
+a {
+    color: rgba(214,234,255,1.00); /* Original color */
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+
+@media (prefers-color-scheme: light) {
     a {
-      color: rgba(214,234,255,1.00); /* Original color */
-      text-decoration: none;
-      text-underline-offset: 3px;
-    }
-    
-    @media (prefers-color-scheme: light) {
-      a {
         color: #0000FF; /* Deep blue color for light mode */
-      }
     }
-    
-    a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-    
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
     body {
       font-family: Arial, sans-serif;
       color: #333;
       margin: 0;
       padding: 0;
-      background-color: var(--bg-color-light); /* Set default background color */
-      transition: background-color 0.5s ease; /* Smooth transition for background color change */
     }
-    
-    body.dark-mode {
-      background-color: var(--bg-color-dark); /* Set background color for dark mode */
-    }
-    
     header {
       background-color: #506adf;
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
-    
     h1 {
       margin: 0;
       font-size: 2em;
     }
-    
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
     }
-    
     .subheading {
       font-size: 1.2em;
       margin-top: 30px;
       border-bottom: 2px solid #506adf;
       padding-bottom: 5px;
     }
-    
     .about-me, .software, .acknowledgements, .note {
       margin-top: 20px;
     }
-    
     .software p, .acknowledgements p, .note p {
       margin: 10px 0;
     }
-    
     .button-module {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 30px;
     }
-    
     .button-icon {
       background-color: #506adf;
       border: 2px solid #fff; /* 更新按钮边框为白色 */
@@ -95,31 +81,25 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-    
     .button-icon img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
-    
     .button-icon:hover {
       background-color: #4053a8;
     }
-    
     .center {
       text-align: center;
     }
-    
     .gray {
       color: gray;
     }
-    
     .menu-button { /* 修改按钮类名为menu-button */
       position: absolute;
       top: 20px;
       left: 20px;
     }
-    
     .footer-button { /* 添加底部按钮样式 */
       background-color: #506adf;
       border: 2px solid #fff;
@@ -134,13 +114,11 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-    
     .footer-button img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
-    
     .footer-button:hover {
       background-color: #4053a8;
     }
@@ -174,4 +152,51 @@
     <p>ecraft(感谢你为我提供服务器，能与我探索网络世界）</p>
     <p>Crush（感谢你借我正版账号，注：这不是我的crush，“Crush”只是网名而已）</p>
     <p>Microsoft™</p>
-    <
+    <p>ChatGLM</p>
+  </section>
+
+  <section class="note">
+    <h2 class="subheading">注明⚠️</h2>
+    <p>本页面HTML代码由<a href="https://ChatGLM.cn/" target="_blank">ChatGLM-4（智谱清言)</a>与北尘（站长本人）编写</p>
+    <p>本页面由<a href="https://pages.github.com/" target="_blank">Github Pages</a>托管</p>
+  </section>
+</div>
+
+<footer class="center gray">
+  <p>Copyright © 2023 - 2024 北尘， All Rights Reserved</p>
+  <p><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a></p>
+</footer>
+
+<div class="button-module">
+  <a href="https://www.douyin.com/user/MS4wLjABAAAAgwbK3SDMw7Tu3mYcf8Pbukct9sE4d_anj6rHmo9cSeWBfdIL0vYypiNofurhM99b" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/抖音.png" alt="抖音">抖音
+  </a>
+  <a href="https://space.bilibili.com/1299753224" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/b站.png" alt="bilibili">B站
+  </a>
+  <a href="mailto:ylbczs090314@qq.com" class="button-icon">
+    <img src="https://www.beichen.icu/email.png" alt="Email">邮件
+  </a>
+  <a href="https://alist.beichen.icu" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/alist.png" alt="alist">Alist
+  </a>
+  <a href="https://blog.beichen.icu" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/blog.png" alt="blog">博客
+  </a>
+  <a href="https://www.beichen.icu/friendlinks" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/links.png" alt="links">友链
+  </a>
+</div>
+  <a href="https://www.beichen.icu/dq" target="_blank" class="button-icon">
+    <img src="https://www.beichen.icu/捐赠.png" alt="Donate">打钱
+  </a>
+</div>
+
+<script>
+  function redirectToMenu() {
+    window.location.href = "https://www.beichen.icu/menu"; /* 修改跳转链接为menu */
+  }
+</script>
+
+</body>
+</html>
