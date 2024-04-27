@@ -6,27 +6,27 @@
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-:root {
-    --bg-color-light: #EDF0F4;
-    --bg-color-dark: #474C53;
-}
-
-a {
-    color: rgba(214,234,255,1.00); /* Original color */
-    text-decoration: none;
-    text-underline-offset: 3px;
-}
-
-@media (prefers-color-scheme: light) {
-    a {
-        color: #0000FF; /* Deep blue color for light mode */
+    :root {
+      --bg-color-light: #EDF0F4;
+      --bg-color-dark: #474C53;
     }
-}
 
-a:hover {
-    color: white;
-    text-decoration: underline;
-}
+    a {
+      color: rgba(214,234,255,1.00);
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      a {
+        color: #0000FF;
+      }
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -34,42 +34,50 @@ a:hover {
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #506adf;
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
+
     h1 {
       margin: 0;
       font-size: 2em;
     }
+
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
     }
+
     .subheading {
       font-size: 1.2em;
       margin-top: 30px;
       border-bottom: 2px solid #506adf;
       padding-bottom: 5px;
     }
+
     .about-me, .software, .acknowledgements, .note {
       margin-top: 20px;
     }
+
     .software p, .acknowledgements p, .note p {
       margin: 10px 0;
     }
+
     .button-module {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 30px;
     }
+
     .button-icon {
       background-color: #506adf;
-      border: 2px solid #fff; /* 更新按钮边框为白色 */
+      border: 2px solid #fff;
       color: #fff;
       text-align: center;
       text-decoration: none;
@@ -79,28 +87,64 @@ a:hover {
       cursor: pointer;
       padding: 15px 20px;
       border-radius: 5px;
-      transition: background-color 0.3s ease;
+      position: relative; /* Add position relative */
     }
+
+    .button-icon::before { /* Add a pseudo-element */
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+      border-radius: 5px;
+      z-index: 1;
+      animation: flow 2s linear infinite; /* Animation */
+    }
+
+    @keyframes flow {
+      0% {
+        left: -150%;
+      }
+      50% {
+        left: 150%;
+      }
+      100% {
+        left: -150%;
+      }
+    }
+
     .button-icon img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
+      z-index: 2; /* Ensure the image is on top of the pseudo-element */
     }
+
+    .button-icon:hover::before { /* Adjust animation for hover state */
+      animation: none;
+    }
+
     .button-icon:hover {
       background-color: #4053a8;
     }
+
     .center {
       text-align: center;
     }
+
     .gray {
       color: gray;
     }
-    .menu-button { /* 修改按钮类名为menu-button */
+
+    .menu-button {
       position: absolute;
       top: 20px;
       left: 20px;
     }
-    .footer-button { /* 添加底部按钮样式 */
+
+    .footer-button {
       background-color: #506adf;
       border: 2px solid #fff;
       color: #fff;
@@ -114,11 +158,13 @@ a:hover {
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
+
     .footer-button img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
+
     .footer-button:hover {
       background-color: #4053a8;
     }
@@ -187,14 +233,13 @@ a:hover {
     <img src="https://www.beichen.icu/links.png" alt="links">Friend Links
   </a>
 </div>
-  <a href="https://www.beichen.icu/dq" target="_blank" class="button-icon">
-    <img src="https://www.beichen.icu/捐赠.png" alt="Donate">Donate
-  </a>
-</div>
+<a href="https://www.beichen.icu/dq" target="_blank" class="button-icon">
+  <img src="https://www.beichen.icu/捐赠.png" alt="Donate">Donate
+</a>
 
 <script>
   function redirectToMenu() {
-    window.location.href = "https://www.beichen.icu/menu"; /* 修改跳转链接为menu */
+    window.location.href = "https://www.beichen.icu/menu";
   }
 </script>
 
