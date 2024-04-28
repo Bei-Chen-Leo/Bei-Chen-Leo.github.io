@@ -130,3 +130,20 @@ h1 {
 .footer-button:hover {
   background-color: #4053a8;
 }
+
+/* 添加进入网页的动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  animation: fadeIn 1s ease forwards; /* 应用进入网页的动画 */
+}
