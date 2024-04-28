@@ -6,77 +6,67 @@
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
   <style>
-    :root {
-      --bg-color-light: #EDF0F4;
-      --bg-color-dark: #474C53;
-    }
+:root {
+    --bg-color-light: #EDF0F4;
+    --bg-color-dark: #474C53;
+}
 
+a {
+    color: rgba(214,234,255,1.00); /* Original color */
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+
+@media (prefers-color-scheme: light) {
     a {
-      color: rgba(214, 234, 255, 1.00); /* 原始颜色 */
-      text-decoration: none;
-      text-underline-offset: 3px;
+        color: #0000FF; /* Deep blue color for light mode */
     }
+}
 
-    @media (prefers-color-scheme: light) {
-      a {
-        color: #0000FF; /* 浅色模式下的深蓝色 */
-      }
-    }
-
-    a:hover {
-      color: white;
-      text-decoration: underline;
-    }
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
     body {
       font-family: Arial, sans-serif;
       color: #333;
       margin: 0;
       padding: 0;
-      background-color: var(--bg-color-light); /* 默认背景色为浅色 */
-      transition: background-color 0.3s ease; /* 添加过渡效果 */
     }
-
     header {
       background-color: #506adf;
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
-
     h1 {
       margin: 0;
       font-size: 2em;
     }
-
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
     }
-
     .subheading {
       font-size: 1.2em;
       margin-top: 30px;
       border-bottom: 2px solid #506adf;
       padding-bottom: 5px;
     }
-
     .about-me, .software, .acknowledgements, .note {
       margin-top: 20px;
     }
-
     .software p, .acknowledgements p, .note p {
       margin: 10px 0;
     }
-
     .button-module {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 30px;
     }
-
     .button-icon {
       background-color: #506adf;
       border: 2px solid #fff; /* 更新按钮边框为白色 */
@@ -91,31 +81,25 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-
     .button-icon img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
-
     .button-icon:hover {
       background-color: #4053a8;
     }
-
     .center {
       text-align: center;
     }
-
     .gray {
       color: gray;
     }
-
     .menu-button {
       position: absolute;
-      top: 10px; /* 调整位置 */
+      top: 10px; /* Adjust this value as needed */
       left: 20px;
     }
-
     .footer-button { /* 添加底部按钮样式 */
       background-color: #506adf;
       border: 2px solid #fff;
@@ -130,13 +114,11 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-
     .footer-button img {
       width: 30px;
       margin-right: 10px;
       vertical-align: middle;
     }
-
     .footer-button:hover {
       background-color: #4053a8;
     }
@@ -148,7 +130,7 @@
   <h1>北尘的主页🏠</h1>
 </header>
 
-<button onclick="toggleDarkMode()" class="button-icon menu-button">切换模式</button>
+<button onclick="redirectToMenu()" class="button-icon menu-button">目录</button>
 
 <div class="container">
   <section class="about-me">
@@ -210,13 +192,8 @@
 </div>
 
 <script>
-  function toggleDarkMode() {
-    var body = document.body;
-    if (body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-    } else {
-      body.classList.add('dark-mode');
-    }
+  function redirectToMenu() {
+    window.location.href = "https://www.beichen.icu/menu"; 
   }
 </script>
 
