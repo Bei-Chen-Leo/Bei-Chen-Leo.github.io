@@ -168,3 +168,17 @@ min-height:100vh;
     clip-path:circle(10% at 90% 20%);
     transition: .5s ease-in-out;
 }
+.inner span{
+float:right;
+font-weight:700;
+font-size:24px
+line-height:12px;
+margin-right:2.5%;
+transition: color .5s;
+}
+.inner:hover{
+clip-path:circle(75%)
+background:#0b6ff}
+.inner:hover span{
+color:rgba(255,255,255,0);
+}
