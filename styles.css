@@ -178,7 +178,11 @@ transition: color .5s;
 }
 .inner:hover{
 clip-path:circle(75%)
-background:#0b6ff}
+background:#0b6ff
+}
 .inner:hover span{
 color:rgba(255,255,255,0);
+}
+.inner p{
+font-size:0.8em
 }
