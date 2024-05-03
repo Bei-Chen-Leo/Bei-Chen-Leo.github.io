@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>友情链接</title>
     <style>
+        /* Your CSS styles here */
 :root {
     --bg-color-light: #EDF0F4;
     --bg-color-dark: #474C53;
@@ -112,6 +113,7 @@ a:hover {
 </head>
 <body>
 <div class="container">
+    <!-- Your friend links here -->
     <h1>友情链接</h1>
     <div class="friend-link" onclick="confirmNavigation('https://www.bilibili.com/video/BV1va411w7aM/')">
         <div class="friend-avatar">
@@ -183,28 +185,25 @@ a:hover {
             <div class="friend-desc">北斗星移，提供即时通讯平台、在线聊天室、翻译、网页快照获取、地图、数字文物库阅览、音乐播放、在线下棋等服务。</div>
             <a class="link-button" href="#">访问网站</a>
         </div>
-    </div>
-<div class="friend-link" onclick="confirmNavigation('https://www.ecraft2008.top')">
-    <div class="friend-avatar">
-        <img src="https://www.beichen.icu/ecraft.jpg" alt="ecraft的博客">
-    </div>
-    <div class="friend-info">
-        <div class="friend-name">ecraft的博客</div>
-        <div class="friend-desc">本站使用WordPress强劲驱动，欢迎访问</div>
-        <a class="link-button" href="#">访问网站</a>
-    </div>
-</div>
-    <!-- 更多友链 -->
 </div>
 <div class="footer">
     <p>更多友链敬请期待...</p>
 </div>
 <div class="footer">
-  <p><a href="mailto:bilibili.beichen@gmail.com">联系我添加</a></p>
-  <p><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a></p>
-  <p><a class="footer" href="https://www.beichen.icu">回到主页</a></p> <!-- 添加回到主页的超链接 -->
+    <p><a href="mailto:bilibili.beichen@gmail.com">联系我添加</a></p>
+    <p><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a></p>
+    <p><a class="footer" href="https://www.beichen.icu">回到主页</a></p>
 </div>
 <script>
+    // JavaScript function to shuffle friend links
+    function shuffleFriendLinks() {
+        var container = document.querySelector('.container');
+        for (var i = container.children.length; i >= 0; i--) {
+            container.appendChild(container.children[Math.random() * i | 0]);
+        }
+    }
+
+    // Function to confirm navigation to external links
     function confirmNavigation(url) {
         if (confirm("您即将离开本站，是否继续访问外部链接？")) {
             window.open(url, '_blank');
