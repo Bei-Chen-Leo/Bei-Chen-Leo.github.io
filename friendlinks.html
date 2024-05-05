@@ -6,21 +6,22 @@
     <title>友情链接</title>
     <style>
         /* Your CSS styles here */
-:root {
-    --bg-color-light: #EDF0F4;
-    --bg-color-dark: #474C53;
-}
+        :root {
+            --bg-color-light: #EDF0F4;
+            --bg-color-dark: #474C53;
+        }
 
-a {
-    color: rgba(0, 102, 204, 1); /* 调整超链接颜色 */
-    text-decoration: none;
-    text-underline-offset: 3px;
-}
+        a {
+            color: rgba(0, 102, 204, 1); /* 调整超链接颜色 */
+            text-decoration: none;
+            text-underline-offset: 3px;
+        }
 
-a:hover {
-    color: white;
-    text-decoration: underline;
-}
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -114,7 +115,7 @@ a:hover {
 <body>
 <div class="container">
     <!-- Your friend links here -->
-   <h1>友情链接</h1>
+    <h1>友情链接</h1>
     <div class="friend-link" onclick="confirmNavigation('https://www.bilibili.com/video/BV1va411w7aM/')">
         <div class="friend-avatar">
             <img src="https://www.beichen.icu/yeyuanxinzhizhu.jpg" alt="野原新之助的GPT镜像站">
@@ -125,46 +126,7 @@ a:hover {
             <a class="link-button" href="#">访问网站</a>
         </div>
     </div>
-    <div class="friend-link" onclick="confirmNavigation('https://www.neokoni.moe')">
-        <div class="friend-avatar">
-            <img src="https://avatars.githubusercontent.com/u/90206655" alt="Avatar">
-        </div>
-        <div class="friend-info">
-            <div class="friend-name">Neokoni's home</div>
-            <div class="friend-desc">Follow that star</div>
-            <a class="link-button" href="#">访问网站</a>
-        </div>
-    </div>
-    <div class="friend-link" onclick="confirmNavigation('https://suiyue.xyz')">
-        <div class="friend-avatar">
-            <img src="https://bei-chen-leo.github.io/sy.jpeg" alt="岁月的小网站">
-        </div>
-        <div class="friend-info">
-            <div class="friend-name">岁月的小网站</div>
-            <div class="friend-desc">回家种地去</div>
-            <a class="link-button" href="#">访问网站</a>
-        </div>
-    </div>
-    <div class="friend-link" onclick="confirmNavigation('https://www.hoshiroko.com')">
-        <div class="friend-avatar">
-            <img src="https://api.hoshiroko.com/img/avatar.jpg" alt="薄荷の小屋">
-        </div>
-        <div class="friend-info">
-            <div class="friend-name">薄荷の小屋</div>
-            <div class="friend-desc">越是拼命往前伸手，渴望之物越是渐行渐远</div>
-            <a class="link-button" href="#">访问网站</a>
-        </div>
-    </div>
-    <div class="friend-link" onclick="confirmNavigation('http://blog.xmb505.top')">
-        <div class="friend-avatar">
-            <img src="http://q.qlogo.cn/headimg_dl?dst_uin=530060699&spec=640&img_type=jpg" alt="新毛博客">
-        </div>
-        <div class="friend-info">
-            <div class="friend-name">新毛博客</div>
-            <div class="friend-desc">喵喵喵！</div>
-            <a class="link-button" href="#">访问网站</a>
-        </div>
-    </div>
+    <!-- 其他友情链接 -->
     <!-- 新添加的友链 -->
     <div class="friend-link" onclick="confirmNavigation('https://www.beidouxingyi.cn/')">
         <div class="friend-avatar">
@@ -176,16 +138,26 @@ a:hover {
             <a class="link-button" href="#">访问网站</a>
         </div>
     </div>
-<div class="friend-link" onclick="confirmNavigation('https://www.ecraft2008.top')">
-    <div class="friend-avatar">
-        <img src="https://www.beichen.icu/ecraft.jpg" alt="ecraft的博客">
+    <div class="friend-link" onclick="confirmNavigation('https://www.ecraft2008.top')">
+        <div class="friend-avatar">
+            <img src="https://www.beichen.icu/ecraft.jpg" alt="ecraft的博客">
+        </div>
+        <div class="friend-info">
+            <div class="friend-name">ecraft的博客</div>
+            <div class="friend-desc">本站使用WordPress强劲驱动，欢迎访问！</div>
+            <a class="link-button" href="#">访问网站</a>
+        </div>
     </div>
-    <div class="friend-info">
-        <div class="friend-name">ecraft的博客</div>
-        <div class="friend-desc">本站使用WordPress强劲驱动，欢迎访问！</div>
-        <a class="link-button" href="#">访问网站</a>
+    <div class="friend-link">
+        <div class="friend-avatar">
+            <img src="https://library.gxres.net/images/icons/avatar.webp" alt="Restent's Notebook">
+        </div>
+        <div class="friend-info">
+            <div class="friend-name">Restent's Notebook</div>
+            <div class="friend-desc">静寂に問う 答えを求めて</div>
+            <a class="link-button" href="https://blog.gxres.net">访问网站</a>
+        </div>
     </div>
-</div>
     <!-- 更多友链 -->
 </div>
 <div class="footer">
@@ -200,7 +172,7 @@ a:hover {
     // JavaScript function to shuffle friend links
     function shuffleFriendLinks() {
         var container = document.querySelector('.container');
-        for (var i = container.children.length; i >= 0; i--) {
+        for (var i = container.children.length; i >=0; i--) {
             container.appendChild(container.children[Math.random() * i | 0]);
         }
     }
