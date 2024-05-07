@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北尘的主页</title>
   <link rel="icon" href="https://littleskin.cn/avatar/223889?size=45" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- 导入外部样式表 -->
 
 </head>
 <body>
 <header>
-  <h1>北尘的主页🏠</h1>
+  <h1>北尘的主页🏠</h1> <!-- 网页标题 -->
 </header>
 
+<!-- 点击按钮跳转到目录页面 -->
 <button onclick="redirectToMenu()" class="button-icon menu-button">目录</button>
 <div class="container">
+  <!-- 关于我部分 -->
   <section class="about-me">
     <h2 class="subheading">关于我🤔</h2>
     <p>一名<s>15岁</s>99岁还差84年的初中生，本人因为一些原因，休学ing。<s>（到blog看看去吧）</s>雷 当面说坏话，背后说坏话还ᵀᴹ被我听到，表扬/贬低我时还添油加醋的😅</p>
@@ -22,12 +24,14 @@
     <p>我是一个HTML爱好者喜欢编写网页，喜欢做一些让别人觉得摸不着头脑的事（？，比如搭建Alist，Minecraft服务器<s>（我个人认为非常正经）</s></p>
   </section>
 
+  <!-- 使用的软件部分 -->
   <section class="software">
     <h2 class="subheading">关于我使用的一些软件🧑‍💻</h2>
     <p><a href="https://www.openfrp.net/" target="_blank">OPENFRP 开放映射</a>（这是一款免费、高效、便捷的端口映射软件</p>
     <p><a href="https://afdian.net/p/0164034c016c11ebafcb52540025c377" target="_blank">PCL2启动器</a>（我的世界启动器，简约，高效，舒服，有点小钱的可以<a href="https://afdian.net/a/LTCat" target="_blank">赞助</a>龙腾猫跃大大哦）</p>
   </section>
 
+  <!-- 鸣谢部分 -->
   <section class="acknowledgements">
     <h2 class="subheading">鸣谢🙇</h2>
     <p>Github</p>
@@ -37,6 +41,7 @@
     <p>阿里云</p>
   </section>
 
+  <!-- 注明部分 -->
   <section class="note">
     <h2 class="subheading">注明⚠️</h2>
     <p>本页面HTML代码由ChatGLM-4（智谱清言)，ChatGPT与北尘（站长本人）编写</p>
@@ -50,6 +55,7 @@
   <p><a href="https://icp.gov.moe/?keyword=20243001" target="_blank">萌ICP备20243001号</a></p>
 </footer>
 
+<!-- 底部按钮模块 -->
 <div class="button-module">
   <a href="https://www.douyin.com/user/MS4wLjABAAAAgwbK3SDMw7Tu3mYcf8Pbukct9sE4d_anj6rHmo9cSeWBfdIL0vYypiNofurhM99b" target="_blank" class="button-icon">
     <img src="https://www.beichen.icu/抖音.png" alt="抖音">抖音
@@ -96,10 +102,13 @@
   </a>
 </div>
 
+<!-- JavaScript部分 -->
 <script>
+  // 点击按钮跳转到目录页面的函数
   function redirectToMenu() {
     window.location.href = "https://menu.beichen.icu"; 
   }
+  // 页面加载时显示欢迎提示框
   window.onload = function() {
     alert("欢迎来到北尘的主页！本站欢迎您！");
   };
